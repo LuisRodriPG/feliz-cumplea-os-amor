@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Cumpleaños Ana 🎂💕</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #ffd6e7;
+      color: #5c2a4a;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 30px;
+      color: #d63384;
+      text-shadow: 2px 2px 5px #fff;
+    }
+
+    p {
+      font-size: 1.4em;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      margin: 30px auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 220px;
+      height: 220px;
+      border-radius: 20px;
+      border: 4px solid #ff66a3;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #ff66a3;
+      color: #fff;
+      font-size: 1.2em;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e05590;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+      font-size: 1.3em;
+      color: #842d72;
+      margin-top: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 6s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Feliz Cumpleaños Ana 💕</h1>
+  <p>
+    Hoy celebro a la persona más maravillosa que la vida me regaló: tú, mi Ana hermosa.  
+    Gracias por ser mi alegría, mi paz y mi razón de sonreír cada día.  
+    Quiero que sepas que siempre estaré a tu lado, en cada momento, apoyándote y amándote con todo mi corazón.  
+    Eres y serás mi amor eterno, mi futura esposa, mi todo ❤️
+  </p>
+
+  <div class="gallery">
+    <!-- Cambia las fotos por tus imágenes -->
+    <img src="foto1.jpg" alt="Foto 1">
+    <img src="foto2.jpg" alt="Foto 2">
+    <img src="foto3.jpg" alt="Foto 3">
+  </div>
+
+  <a class="btn" onclick="mostrarCarta()">💌 Ver mi cartita para ti 💌</a>
+
+  <div id="carta" class="hidden">
+    Ana, mi amor...  
+    Desde que llegaste a mi vida, todo tiene más sentido.  
+    No solo eres mi enamorada, eres mi compañera, mi mejor amiga y la mujer con la que quiero compartir cada sueño.  
+    Estoy convencido de que un día serás mi esposa y juntos construiremos todo lo que siempre imaginamos.  
+    Te amo más de lo que las palabras pueden explicar 💕
+  </div>
+
+  <div class="hearts">
+    <!-- corazones flotantes -->
+    <div class="heart" style="left:10%; animation-delay:0s;"></div>
+    <div class="heart" style="left:30%; animation-delay:2s;"></div>
+    <div class="heart" style="left:50%; animation-delay:4s;"></div>
+    <div class="heart" style="left:70%; animation-delay:1s;"></div>
+    <div class="heart" style="left:90%; animation-delay:3s;"></div>
+  </div>
+
+  <script>
+    function mostrarCarta() {
+      document.getElementById("carta").classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
